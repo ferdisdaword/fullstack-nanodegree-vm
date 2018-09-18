@@ -1,0 +1,181 @@
+body {
+  font-family: sans-serif;
+  background-color: #dddddd;
+}
+
+h1 {
+  border-bottom: 2px solid #000;
+  border-color: #00ffc5;
+  color: #00ffc5;
+}
+
+h2,
+h3,
+h4 {
+  color: #3c3c3c;
+}
+
+h1,
+h2 {
+  font-family: 'georgia', serif;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+p,
+dd,
+dt {
+  color: #3c3c3c;
+}
+
+a {
+  text-decoration: none;
+  color: #00ffc5;
+  font-size: .75em;
+}
+
+a:hover {
+  color: white;
+}
+
+a.btn {
+  padding:5px 15px;
+  background-color: #3c3c3c;
+  border:1px solid #ffffff;
+  color: #ffffff;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.auth {
+  text-decoration: none;
+  color: #00ffc5;
+  font-size: .75em;
+}
+
+.btn {
+  background-color: #3c3c3c;
+  border:1px solid #ffffff;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor:pointer;
+  padding:5px 15px;
+  -webkit-border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #00ffc5;
+  color: #3c3c3c;
+}
+
+.btn-danger:hover {
+  background-color: red;
+  color: #ffffff;
+}
+
+.btn-yes:hover {
+  background-color: red;
+  color: #ffffff;
+}
+
+.btn-default:hover {
+  background-color: #dddddd;
+  border:1px solid;
+  color: #3c3c3c;
+}
+
+.card {
+  font-size: 1em;
+  overflow: hidden;
+  padding: 0;
+  border: none;
+  border-radius: .28571429rem;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+
+.card-block {
+  background: #eeeeee;
+  font-size: 1em;
+  position: relative;
+  margin: 0;
+  padding: 1em;
+  border: none;
+  border-top: 1px solid rgba(34, 36, 38, .1);
+  box-shadow: none;
+}
+
+.card-img-top {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-title {
+  font-size: 1.28571429em;
+  font-weight: 700;
+  line-height: 1.2857em;
+}
+
+.card-text {
+  clear: both;
+  margin-top: .5em;
+  color: rgba(0, 0, 0, .68);
+}
+
+.card-footer {
+  font-size: 1em;
+  position: static;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  padding: .75em 1em;
+  color: rgba(0, 0, 0, .4);
+  border-top: 1px solid rgba(0, 0, 0, .05) !important;
+  background: #fff;
+}
+
+.header {
+  left: 50%;
+  text-align: center;
+}
+
+.menutitle {
+  left: 25%;
+  border: 1px solid;
+  border-radius: .28571429rem;
+  padding: 15px;
+  margin: 5px;
+  border-color: #eeeeee;
+  background-color: #3c3c3c;
+}
+
+.navbar {
+  background-color: #3c3c3c;
+}
+
+.name {
+  color: #3c3c3c;
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+
+.course {
+  font-size: .75em;
+}
+
+.description {}
+
+.price {
+  text-align: right;
+  width: 50%;
+  float: right;
+}
+
+.flash {
+  background: #41F6B2;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{url_for('showRestaurants')}}">Restaurants Catalog</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <a href='{{url_for('newRestaurant')}}' class="btn navbar-btn">
+        <span class="glyphicon glyphicon-plus"></span> New Restaurant</a>
+      <a href='{{url_for('restaurantsJSON')}}' class="btn navbar-btn">
+        <span class="glyphicon glyphicon-file"></span> JSON</a>
+      {% if 'username' not in session %}
+          <a class="btn navbar-btn" href="{{url_for('showLogin')}}">
+            <span class="glyphicon glyphicon-log-in"></span> Login</a>
+          {% else %}
+          <a class="btn btn-danger navbar-btn" href="{{url_for('gdisconnect')}}">
+            <span class="glyphicon glyphicon-log-out"></span> Logout</a>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+
+</body>
+</html>

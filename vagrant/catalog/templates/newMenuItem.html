@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+{% include "nav_menu_new.html" %}
+{% include "flash.html" %}
+
+<h1 class='menutitle'>New {{restaurant.name}} Menu Item</h1>
+
+<br>
+<form action="{{url_for('newMenuItem', restaurant_id=restaurant_id)}}" method="POST">
+  <p>Name:</p>
+    <p><input type='text' size='90' name='name' required></p>
+  <p>Description:</p>
+    <p><textarea rows="4" cols="92" type='text' size='90' name='description' required></textarea></p>
+  <p>Price:</p>
+    <p><input type='text' size='90' name='price' value="$" required></p>
+  <p>Course:</p>
+    <div class="radio-inline">
+      <label class="radio-inline"><input type="radio" name="course" id="Appetizer" value="Appetizer" required>Appetizer</label>
+    </div>
+    <div class="radio-inline">
+      <label class="radio-inline"><input type="radio" name="course" id="Beverage" value="Beverage" required>Beverage</label>
+    </div>
+    <div class="radio-inline">
+      <label class="radio-inline"><input type="radio" name="course" id="Entree" value="Entree" required>Entree</label>
+    </div>
+    <div class="radio-inline">
+      <label class="radio-inline"><input type="radio" name="course" id="Dessert" value="Dessert" required>Dessert</label>
+    </div>
+<br><br>
+<input class="btn navbar-btn" type='submit' value='Create'>
+<a href='{{url_for('showMenu', restaurant_id=restaurant_id)}}' class="btn btn-default navbar-btn">Cancel</a>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{url_for('showRestaurants')}}">
+        <span class="glyphicon glyphicon-chevron-left"></span> Restaurants Catalog</a>
+    </div>
+    <a href='{{url_for('newMenuItem', restaurant_id=restaurant.id)}}' class="btn navbar-btn">
+      <span class="glyphicon glyphicon-plus"></span> New Menu Item</a>
+    <a href='{{url_for('showMenuJSON', restaurant_id=restaurant.id)}}' class="btn navbar-btn">
+      <span class="glyphicon glyphicon-file"></span> JSON</a>
+    {% if 'username' not in session %}
+        <a class="btn navbar-btn" href="{{url_for('showLogin')}}">
+          <span class="glyphicon glyphicon-log-in"></span> Login</a>
+        {% else %}
+        <a class="btn btn-danger navbar-btn" href="{{url_for('gdisconnect')}}">
+          <span class="glyphicon glyphicon-log-out"></span> Logout</a>
+    {% endif %}
+  </div>
+</nav>

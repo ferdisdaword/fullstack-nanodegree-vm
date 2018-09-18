@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<h1 class='menutitle'>Delete {{restaurant.name}} from the Restaurant Catalog?</h1>
+<form action="{{url_for('deleteRestaurant', restaurant_id=restaurant.id)}}" method='POST'>
+  <input class="btn btn-danger btn-yes navbar-btn", type='submit', value='Yes'>
+  <a href="{{url_for('showRestaurants')}}" class="btn btn-default navbar-btn">No</a>
+
+</form>
+
+</body>
+</html>

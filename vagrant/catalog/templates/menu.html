@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+{% include "nav_menu_main.html" %}
+{% include "flash.html" %}
+
+<div class='menutitle'><h1>{{restaurant.name}} Menu</h1></div><br>
+
+{% for i in items %}
+<div class="col-lg-6 col-md-6 col-lg-6">
+    <div class="card card-inverse card-info">
+        <div class="card-block">
+            <h4 class="card-title">
+              <span class='name'><p>{{i.name}}</p></span>
+              <span class='price'><p>{{i.price}}</p></span></h4>
+            <div class="card-text">
+              <div class='course'><p>{{i.course}}</p></div>
+              <div class='description'><p>{{i.description}}</p></div>
+            </div>
+        </div>
+        <div class="card-footer">
+          <div class="btn-group" role="group" aria-label="menu button group">
+            <a href='{{url_for('editMenuItem', restaurant_id=restaurant.id, menu_id=i.id)}}' class="btn btn-sm">
+              <span class="glyphicon glyphicon-pencil"></span> Edit</a>
+            <a href='{{url_for('menuItemJSON', restaurant_id=restaurant.id, menu_id=i.id)}}' class="btn btn-sm">
+              <span class="glyphicon glyphicon-file"></span> JSON</a>
+          </div>
+          <a href='{{url_for('deleteMenuItem', restaurant_id=restaurant.id, menu_id=i.id)}}' class="btn btn-danger btn-sm">
+            <span class="glyphicon glyphicon-remove"></span> Delete</a>
+        </div>
+    </div>
+  </div>
+
+{% endfor %}
+
+</body>
+</html>
