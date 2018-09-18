@@ -1,7 +1,5 @@
 # Restaurant Menu App
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
 Restaurant Menu App is a CRUD catalog app with regard to Restaurant and Menu management powered by Python and HTML, Bootstrap and Javascript.
 
   - View Restaurant catalog
@@ -45,4 +43,4 @@ Verify the deployment by navigating to your server address in your preferred bro
 127.0.0.1:5000
 ```
 
-[example](example.png)]
+[!example image]Restaurant Menu App (example.png)
